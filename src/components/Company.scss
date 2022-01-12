@@ -1,0 +1,14 @@
+@import "../custom.scss";
+
+.company-list-single {
+    transition: all 100ms ease-in-out;
+  &:hover {
+    background-color: $blue-100;
+    cursor: pointer;
+  }
+}
+.company-list-single-active {
+  background-color: $blue-100;
+  color: $dark;
+  border-right: 5px solid $blue-600;
+}
