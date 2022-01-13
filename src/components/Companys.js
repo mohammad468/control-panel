@@ -1,35 +1,43 @@
-import React from 'react';
+import React, { useState } from "react";
 
 // * components
-import Company from './Company';
+import Company from "./Company";
 
 const Companys = () => {
-    return (
-      <React.Fragment>
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-        <Company />
-      </React.Fragment>
-    );
+  const [active, setActive] = useState(false);
+  console.log(active);
+
+  const myHandler = () => {
+    setActive(true);
+    console.log("trued");
+  };
+
+  return (
+    <React.Fragment>
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+      <Company onClick={myHandler} />
+    </React.Fragment>
+  );
 };
 
 export default Companys;

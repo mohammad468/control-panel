@@ -10,17 +10,15 @@ import "./Company.scss";
 
 const Myoffcanvas = () => {
   return (
-    <React.Fragment
-      className="bg-white shadow shadow-3"
-      xxl="3"
-      xl="3"
-      lg="3"
-      md="4"
-      sm="12"
-      xs="12"
-    >
+    <React.Fragment>
       <Container
-        className="bg-white mt-2"
+        className="bg-white mt-2 shadow shadow-3"
+        xxl="3"
+        xl="3"
+        lg="3"
+        md="4"
+        sm="12"
+        xs="12"
         style={{
           maxHeight: "calc(100vh - 70px)",
           overflowY: "auto",
