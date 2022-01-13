@@ -15,27 +15,6 @@ const Companys = () => {
   return (
     <React.Fragment>
       <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
-      <Company onClick={myHandler} />
     </React.Fragment>
   );
 };
