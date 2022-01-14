@@ -27,11 +27,13 @@ const Company = () => {
           <Row
             className={
               selectedCoin === coin.id
-                ? "p-2 border-top d-flex align-items-center company-list-single-active"
+                ? "p-2 pe-4 border-top d-flex align-items-center company-list-single-active"
                 : "p-2 border-top d-flex align-items-center company-list-single"
             }
             onClick={() => {
               setSelectedCoin(coin.id);
+              console.log(coin.id);
+              console.log(coin.name);
             }}
             key={coin.id}
           >

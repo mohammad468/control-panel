@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container } from "react-bootstrap";
-import { Route, Routes } from "react-router-dom";
 
 // * api
 import { getCoin } from "../services/api";
@@ -31,11 +30,7 @@ const Main = () => {
           overflowY: "auto",
         }}
       >
-        {coins.length ? (
-          coins.map((coin) => <Details key={coin.id} />)
-        ) : (
-          <Loader />
-        )}
+        {coins.length ? <Details key={coins.id} /> : <Loader />}
       </Container>
     </Col>
   );

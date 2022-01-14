@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Details = () => {
-  const BASE_URL = "https://api.coingecko.com/api/v3/coins";
-  const getDetailsCoin = async () => {
-    const response = await axios.get(BASE_URL);
-    return response.data;
+  const [data, setData] = useState({
+    name: "",
+    id: "",
+  });
+
+  const apiDetails = () => {
+    axios
+      .get(`https://api.coingecko.com/api/v3/coins/${"ethereum"}`)
+      .then((response) => {
+        // console.log(response);
+        setData({
+          name: response.data.name,
+          id: response.data.id,
+        });
+        return setData;
+      });
   };
+
+  useEffect(() => {
+    (async () => {
+      const response = await apiDetails();
+      setData({
+        name: response.data.name,
+        id: response.data.id,
+      });
+    })();
+  }, []);
 
   return (
     <div>
-      <h1>is details of Bitcoin</h1>
+      <h1>{data.name}</h1>
+      <h1>{data.id}</h1>
     </div>
   );
 };
