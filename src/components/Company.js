@@ -65,8 +65,6 @@ const Company = () => {
       ) : (
         <Loader />
       )}
-      {/* <FaBeer />
-        <span className="me-2">شرکتها</span> */}
     </>
   );
 };

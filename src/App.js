@@ -1,6 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./App.scss";
 
+// *SPA
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 //*components
 import MyOffcanvas from "./components/MyOffcanvas";
 import Main from "./components/Main";
@@ -8,19 +11,15 @@ import MyNav from "./components/MyNav";
 
 function App() {
   return (
-    <Container fluid className="app">
-      <MyNav />
-      <Row>
-        <Col xxl="3" xl="3" lg="3" md="4" sm="11" xs="11">
+    <BrowserRouter>
+      <Container fluid className="app">
+        <MyNav />
+        <Row>
           <MyOffcanvas className="sticky-top" />
-        </Col>
-        <Col>
-          <Container>
-            <Main />
-          </Container>
-        </Col>
-      </Row>
-    </Container>
+          <Main />
+        </Row>
+      </Container>
+    </BrowserRouter>
   );
 }
 

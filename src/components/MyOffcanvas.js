@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 
 //*components
 import Companys from "./Companys";
@@ -10,7 +10,7 @@ import "./Company.scss";
 
 const Myoffcanvas = () => {
   return (
-    <React.Fragment>
+    <Col xxl="3" xl="3" lg="3" md="4" sm="11" xs="11">
       <Container
         className="bg-white mt-2 shadow shadow-3"
         xxl="3"
@@ -26,7 +26,7 @@ const Myoffcanvas = () => {
       >
         <Companys />
       </Container>
-    </React.Fragment>
+    </Col>
   );
 };
 

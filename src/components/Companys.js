@@ -1,20 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 // * components
 import Company from "./Company";
 
 const Companys = () => {
-  const [active, setActive] = useState(false);
-  console.log(active);
-
-  const myHandler = () => {
-    setActive(true);
-    console.log("trued");
-  };
-
   return (
     <React.Fragment>
-      <Company onClick={myHandler} />
+      <Company />
     </React.Fragment>
   );
 };
