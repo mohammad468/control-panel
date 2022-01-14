@@ -7,14 +7,14 @@ const Details = () => {
     id: "",
   });
 
-  const apiDetails = () => {
-    axios
+  const apiDetails = async () => {
+    await axios
       .get(`https://api.coingecko.com/api/v3/coins/${"ethereum"}`)
-      .then((response) => {
+      .then((r) => {
         // console.log(response);
         setData({
-          name: response.data.name,
-          id: response.data.id,
+          name: r.data.name,
+          id: r.data.id,
         });
         return setData;
       });

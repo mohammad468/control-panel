@@ -8,6 +8,7 @@
   }
 }
 .company-list-single-active {
+  transition: all 150ms ease-in-out;
   background-color: $blue-100;
   color: $dark;
   border-right: 5px solid $blue-600;
