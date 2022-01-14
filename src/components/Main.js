@@ -17,21 +17,22 @@ const Main = () => {
   useEffect(() => {
     const fetchAPI = async () => {
       const data = await getCoin();
-      console.log(data);
       setCoins(data);
     };
     fetchAPI();
   }, []);
 
   return (
-    <Col xxl="8" xl="8" lg="8" md="7" sm="11" xs="11">
-      <Container className="mt-2 bg-white shadow">
+    <Col xxl="9" xl="9" lg="9" md="7" sm="12" xs="12">
+      <Container
+        className="mt-2 bg-white shadow"
+        style={{
+          maxHeight: "calc(100vh - 70px)",
+          overflowY: "auto",
+        }}
+      >
         {coins.length ? (
-          coins.map((coin) => (
-            <Routes>
-              <Route to="/details/:id" element={<Details />} />
-            </Routes>
-          ))
+          coins.map((coin) => <Details key={coin.id} />)
         ) : (
           <Loader />
         )}

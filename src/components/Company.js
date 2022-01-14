@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-// import { FaBeer } from "react-icons/fa";
 import "./Company.scss";
 
 // * api
@@ -12,44 +11,41 @@ import Loader from "./Loader";
 const Company = () => {
   const [changeClass, setChangeClass] = useState(false);
   const [coins, setCoins] = useState([]);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchAPI = async () => {
       const data = await getCoin();
-      console.log(data);
       setCoins(data);
     };
     fetchAPI();
   }, []);
-
-  const searchHandler = (event) => {
-    setSearch(event.target.value);
-  };
-
-  const searchCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
-  );
 
   const myHandler = () => {
     setChangeClass(true);
     console.log("trued");
   };
 
+  const myHandler2 = () => {
+    console.log();
+  };
+
   return (
     <>
       {coins.length ? (
-        searchCoins.map((coin) => (
+        coins.map((coin) => (
           <Row
             className={
               changeClass
                 ? "p-2 border-top d-flex align-items-center company-list-single-active"
                 : "p-2 border-top d-flex align-items-center company-list-single"
             }
-            onClick={myHandler}
+            onClick={() => {
+              myHandler();
+              myHandler2();
+            }}
             key={coin.id}
           >
-            <Col xxl="2" xl="2" lg="2" md="2" sm="2" xs="2">
+            <Col xxl="3" xl="3" lg="4" md="4" sm="2" xs="2">
               <Image
                 src={coin.image}
                 alt={coin.name}
