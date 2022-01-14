@@ -13,7 +13,6 @@ import Details from "./Details";
 
 const Main = () => {
   const [coins, setCoins] = useState([]);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -24,18 +23,11 @@ const Main = () => {
     fetchAPI();
   }, []);
 
-  const searchHandler = (event) => {
-    setSearch(event.target.value);
-  };
-
-  const searchCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
-  );
   return (
     <Col xxl="8" xl="8" lg="8" md="7" sm="11" xs="11">
       <Container className="mt-2 bg-white shadow">
         {coins.length ? (
-          searchCoins.map((coin) => (
+          coins.map((coin) => (
             <Routes>
               <Route to="/details/:id" element={<Details />} />
             </Routes>
