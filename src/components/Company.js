@@ -1,30 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import "./Company.scss";
 
-// * api
-import { getCoin } from "../services/api";
-
 // *spinner
 import Loader from "./Loader";
+import { useCoins } from "../context/CoinsContext";
 
 const Company = () => {
-  const [selectedCoin, setSelectedCoin] = useState(null);
-  const [coins, setCoins] = useState([]);
-
-  useEffect(() => {
-    const fetchAPI = async () => {
-      const data = await getCoin();
-      setCoins(data);
-    };
-    fetchAPI();
-  }, []);
-
-  const coinId = () => {
-    console.log(selectedCoin);
-  };
-
-  coinId();
+  const { coins, selectedCoin, setSelectedCoin } = useCoins();
 
   return (
     <>

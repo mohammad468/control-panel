@@ -4,9 +4,13 @@ import { ThemeProvider } from "react-bootstrap";
 import App from "./App";
 import "./App.scss";
 
+import { CoinsContextProvider } from "./context/CoinsContext";
+
 ReactDOM.render(
   <ThemeProvider dir="rtl">
-    <App />
+    <CoinsContextProvider>
+      <App />
+    </CoinsContextProvider>
   </ThemeProvider>,
   document.getElementById("root")
 );

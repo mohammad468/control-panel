@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import { useCoins } from "../context/CoinsContext";
+
 const Details = () => {
+  const { selectedCoin, coins, setSelectedCoin } = useCoins();
+
   const [data, setData] = useState({
     name: "",
     id: "",
