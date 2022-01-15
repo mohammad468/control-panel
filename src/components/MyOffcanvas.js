@@ -12,7 +12,7 @@ const Myoffcanvas = () => {
   return (
     <Col xxl="3" xl="3" lg="3" md="4" sm="11" xs="12">
       <Container
-        className="bg-white mt-2 shadow shadow-3"
+        className="bg-white mt-2 shadow shadow-3 Myoffcanvas-rounded"
         xxl="3"
         xl="3"
         lg="3"

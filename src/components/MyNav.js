@@ -4,7 +4,9 @@ import { Container, NavDropdown, Navbar, Nav } from 'react-bootstrap';
 const MyNav = () => {
     return (
       <div>
-        <Navbar bg="light" expand="lg" className="shadow">
+        <Navbar bg="light" expand="lg" className="shadow" style={
+          { borderRadius: "20px" }
+        }>
           <Container>
             <Navbar.Brand href="#home">پنل مدیریت</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

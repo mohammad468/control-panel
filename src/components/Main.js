@@ -10,6 +10,9 @@ import Loader from "./Loader";
 // *components
 import Details from "./Details";
 
+// *style
+import "./Details.scss";
+
 const Main = () => {
   const [coins, setCoins] = useState([]);
 
@@ -24,7 +27,7 @@ const Main = () => {
   return (
     <Col xxl="9" xl="9" lg="9" md="7" sm="12" xs="12">
       <Container
-        className="mt-2 bg-white shadow"
+        className="mt-2 bg-white shadow details-rounded"
         style={{
           maxHeight: "calc(100vh - 70px)",
           overflowY: "auto",
