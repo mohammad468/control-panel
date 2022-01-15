@@ -4,7 +4,7 @@ import { getCoin } from "../services/api";
 const CoinsContext = createContext({});
 
 export const CoinsContextProvider = ({ children }) => {
-  const [selectedCoin, setSelectedCoin] = useState(null);
+  const [selectedCoin, setSelectedCoin] = useState("");
   const [coins, setCoins] = useState([]);
 
   useEffect(() => {

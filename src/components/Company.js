@@ -9,9 +9,7 @@ import { useCoins } from "../context/CoinsContext";
 const Company = () => {
   const { coins, selectedCoin, setSelectedCoin } = useCoins();
 
-  if (selectedCoin === null) {
-    console.log("its null");
-  }
+  
 
   return (
     <>
@@ -25,8 +23,12 @@ const Company = () => {
             }
             onClick={() => {
               setSelectedCoin(coin.id);
-              console.log(selectedCoin);
-              // console.log(coin.name);
+              // console.log(selectedCoin);
+              if (selectedCoin === "") {
+                // console.log("its null");
+              } else{
+                // console.log("its not null");
+              }
             }}
             key={coin.id}
           >
