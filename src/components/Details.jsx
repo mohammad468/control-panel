@@ -13,7 +13,7 @@ const Details = () => {
 
   const apiDetails = async () => {
     await axios
-      .get(`https://api.coingecko.com/api/v3/coins/${"ethereum"}`)
+      .get(`https://api.coingecko.com/api/v3/coins/${selectedCoin ? selectedCoin : "bitcoin"}`)
       .then((r) => {
         // console.log(response);
         setData({
