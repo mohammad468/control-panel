@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Row, Col } from "react-bootstrap";
 
 import { useCoins } from "../context/CoinsContext";
 
@@ -12,37 +13,6 @@ const Details = () => {
   // }]);
 
   const [myData, setMyData] = useState([]);
-
-  // useEffect(() => {
-  //   const apiDetails = async () => {
-  //     await axios
-  //       .get(
-  //         `https://api.coingecko.com/api/v3/coins/${
-  //           selectedCoin ? selectedCoin : "bitcoin"
-  //         }`
-  //       )
-  //       .then((r) => {
-  //         console.log(r);
-  //         setData({
-  //           name: r.data.name,
-  //           id: r.data.id,
-  //         });
-  //         return setData;
-  //       });
-  //   };
-  //   ( () => {
-  //     const response = apiDetails();
-  //     setData({
-  //       name: response.data.name,
-  //       id: response.data.id,
-  //     });
-  //   })();
-  //   console.log(
-  //     `https://api.coingecko.com/api/v3/coins/${
-  //       selectedCoin ? selectedCoin : "bitcoin"
-  //     }`
-  //   );
-  // }, []);
 
   useEffect(() => {
     axios
@@ -58,10 +28,15 @@ const Details = () => {
 
   return (
     <div>
-      <p>{selectedCoin}</p>
-      {console.log(selectedCoin)}
-      {console.log(myData)}
-      <h1>{myData.id}</h1>
+      <h1 className="text-uppercase text-center">{myData.name}</h1>
+      <Row>
+        <Col className="border border-primary p-2 my-2 mx-2 rounded">
+          <h1 className="text-center">{myData.name}</h1>
+        </Col>
+        <Col className="border border-primary p-2 my-2 mx-2 rounded">
+          <h1 className="text-center">{myData.name}</h1>
+        </Col>
+      </Row>
     </div>
   );
 };
