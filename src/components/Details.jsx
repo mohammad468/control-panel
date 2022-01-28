@@ -31,12 +31,13 @@ const Details = () => {
       </h1>
       <Row>
         <Col className="border border-primary p-2 my-2 mx-2 rounded">
-          <h1 className="text-center text-info">{myData.name}</h1>
+          {/* <h1 className="text-center text-info">{myData.name}</h1> */}
           <p className="text-start px-3 text-lowercase">
             {/* {myData.description.en} */}
           </p>
           <a
-            href={myData.links.homepage}
+            href='#'
+            // href={myData.links.homepage}
             target="_blank"
             className="d-flex justify-content-center"
           >
@@ -49,7 +50,7 @@ const Details = () => {
           <h1 className="text-center text-info">{myData.name}</h1>
           <p className="text-start">{/* {myData.description.en} */}</p>
           <a
-            href={myData.links.homepage}
+            // href={myData.links.homepage}
             target="_blank"
             className="d-flex justify-content-center"
           >
